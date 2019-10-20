@@ -1,0 +1,43 @@
+﻿@model BirthdayApp.Models.UserResponse
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div> 
+        <dl class="list-group-horizontal">
+            <dt>ID</dt>
+            <dd>@Model.Id</dd>
+
+            <dt>Name</dt>
+            <dd>@Model.Name</dd>
+
+            <dt>Email</dt>
+            <dd>@Model.Email</dd>
+
+            <dt>Phone</dt>
+            <dd>@Model.Phone</dd>
+
+            <dt>Attend?</dt>
+            <dd>
+                @if (Model.WillAttend == true)
+                {
+                    <p>Yes</p>
+                }
+                else
+                {
+                    <p>No</p>
+                }
+            </dd>
+        </dl>
+    </div>
+</body>
+</html>
